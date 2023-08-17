@@ -1,0 +1,259 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#030302;
+    color: #f2f0ee;
+}
+nav{
+    display: flex;
+    padding: 1.2rem 0rem;
+    align-content: center;
+    justify-content: space-around;
+    height: 20vh;
+}
+nav h5{
+    font-size: 1rem;
+}
+.nav_menu{
+    display: flex;
+    width: 20%;
+    gap: 1.5rem;
+}
+.nav_menu li{
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.active{
+    color: #336fd1;
+}
+.nav_menu li:hover{
+    transition: all ease-in 250ms;
+    color: #336fd1;
+}
+.landing_page{
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.landing_page h3{
+    font-size: 1.7rem;
+}
+span{
+    background: linear-gradient(120deg, #062ab8, #7b7693);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.landing_page button{
+    background-color: #062ab8;
+    border: none;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #f2f0ee;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.landing_page button:hover{
+    transition: all ease-in 200ms;
+    background-color: #336fd1;
+}
+.about_me{
+    height: 100vh;
+    display: flex;
+    gap: 5rem;
+    padding: 2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem;
+}
+.about_me div h3{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.about_me div hr{
+    width: 20%;
+    border: 1px solid #062ab8;
+    margin-bottom: 0.7rem;
+}
+.about_me div p{
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+}
+.about_me_image{
+    height: 69vh;
+}
+.about_me div button{
+    background-color: #062ab8;
+    border: none;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #f2f0ee;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.about_me div button:hover{
+    transition: all ease-in 200ms;
+    background-color: #336fd1;
+}
+#Resume{
+    background-color: #3f3d56;
+}
+.Skills{
+    padding:5rem;
+}
+.Skills h3{
+    text-align: center;
+    font-size: 1.9rem;
+}
+.Skills hr{
+    margin: auto;
+    width: 9.5rem;
+    border: 1px solid #062ab8;
+    margin-bottom: 2.5rem;
+}
+.Skills_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.image_container{
+    height: 10rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.image_container:hover{
+    transition: all ease 250ms;
+    transform: scale(1.1);
+}
+.image_container img{
+    height: 100%;
+    width: 100%;
+}
+.Project{
+    padding:4.5rem;
+}
+.Project h3{
+    text-align: center;
+    font-size: 1.9rem;
+}
+.Project hr{
+    margin: auto;
+    width: 10rem;
+    border: 1px solid #062ab8;
+    margin-bottom: 2.5rem;
+}
+.Projects_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    height: 70%;
+}
+.Project_container{
+    height: 20.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    background: linear-gradient(120deg, #062ab8, #7b7693);
+}
+.Project_container:hover{
+    transition: all ease 250ms;
+    transform: scale(1.1);
+}
+.Project_container h4{
+    color: #030302;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+.Project_container p{
+    padding: 0.1rem 0.5rem;
+    color: #030302;
+    font-size: 1rem;
+    margin: 0.35rem 0;
+}
+.Project_container img{
+    height: 14rem;
+    width: 100%;
+}
+.Project_container button{
+    background-color: #3f3d56;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #f2f0ee;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left:40%;
+}
+.Project_container button:hover{
+    transition: all ease-in 200ms;
+    background-color: #336fd1;
+}
+.Contact{
+    height: 70vh;
+    padding:2rem;
+}
+.Contact h3{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.Contact hr{
+    margin: auto;
+    width: 10.5rem;
+    border: 1px solid #062ab8;
+    margin-bottom: 2.5rem;
+}
+input{
+    padding: 0.9rem 0.8rem;
+    outline: none;
+    font-size: 1rem;
+    display: block;
+    margin-left: 3rem;
+    width: 92%;
+    margin-bottom: 0.6rem;
+    border: none;
+    border-radius: 0.325rem;
+    background: #c7c4d8;
+}
+textarea{
+    padding: 0.9rem 0.8rem;
+    outline: none;
+    font-size: 1rem;
+    display: block;
+    margin-left: 3rem;
+    width: 92%;
+    margin-bottom: 0.6rem;
+    border: none;
+    border-radius: 0.325rem;
+    background: #c7c4d8;
+}
+form button{
+    background-color: #062ab8;
+    border: none;
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+    padding: 1rem 1rem;
+    color: #f2f0ee;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 92%;
+    border-radius: 7px;
+}
+form button:hover{
+    transition: all ease-in 200ms;
+    background-color: #336fd1;
+}
+/* --secondary: #1b1d22; 
+--accent: #7b7693;*/
