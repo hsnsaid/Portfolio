@@ -1,3 +1,13 @@
+@keyframes slideInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }  
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,9 +19,9 @@ body{
 }
 nav{
     display: flex;
-    padding: 1.2rem 0rem;
+    padding: 1.2rem 3rem;
     align-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 20vh;
 }
 nav h5{
@@ -21,12 +31,18 @@ nav h5{
     display: flex;
     width: 20%;
     gap: 1.5rem;
+    width: 70%;
+    justify-content: flex-end;
 }
 .nav_menu li{
     list-style-type: none;
     font-weight: bold;
     font-size: 0.95rem;
     cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 .active{
     color: #336fd1;
@@ -35,7 +51,7 @@ nav h5{
     transition: all ease-in 250ms;
     color: #336fd1;
 }
-.landing_page{
+#landing_page{
     display: flex;
     flex-direction: column;
     height: 65vh;
@@ -43,7 +59,7 @@ nav h5{
     align-items: center;
     gap: 0.5rem;
 }
-.landing_page h3{
+#landing_page h3{
     font-size: 1.7rem;
 }
 span{
@@ -51,7 +67,7 @@ span{
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.landing_page button{
+.Contect_me_button{
     background-color: #062ab8;
     border: none;
     margin-top: 0.5rem;
@@ -61,12 +77,11 @@ span{
     font-weight: bold;
     cursor: pointer;
 }
-.landing_page button:hover{
+.Contect_me_button:hover{
     transition: all ease-in 200ms;
     background-color: #336fd1;
 }
-.about_me{
-    height: 100vh;
+#about_me{
     display: flex;
     gap: 5rem;
     padding: 2rem;
@@ -75,16 +90,16 @@ span{
     align-items: center;
     padding: 6rem;
 }
-.about_me div h3{
+#about_me div h3{
     font-size: 1.4rem;
     font-weight: bold;
 }
-.about_me div hr{
+#about_me div hr{
     width: 20%;
     border: 1px solid #062ab8;
     margin-bottom: 0.7rem;
 }
-.about_me div p{
+#about_me div p{
     font-size: 0.75rem;
     font-weight: bold;
     margin-bottom: 0.6rem;
@@ -92,8 +107,8 @@ span{
 .about_me_image{
     height: 69vh;
 }
-.about_me div button{
-    background-color: #062ab8;
+#Resume{
+    background-color: #3f3d56;
     border: none;
     margin-top: 0.5rem;
     margin-right: 0.5rem;
@@ -103,21 +118,14 @@ span{
     font-weight: bold;
     cursor: pointer;
 }
-.about_me div button:hover{
-    transition: all ease-in 200ms;
-    background-color: #336fd1;
+#Skills{
+    padding:4.5rem;
 }
-#Resume{
-    background-color: #3f3d56;
-}
-.Skills{
-    padding:5rem;
-}
-.Skills h3{
+#Skills h3{
     text-align: center;
     font-size: 1.9rem;
 }
-.Skills hr{
+#Skills hr{
     margin: auto;
     width: 9.5rem;
     border: 1px solid #062ab8;
@@ -125,7 +133,7 @@ span{
 }
 .Skills_container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
 }
 .image_container{
@@ -141,14 +149,14 @@ span{
     height: 100%;
     width: 100%;
 }
-.Project{
+#Project{
     padding:4.5rem;
 }
-.Project h3{
+#Project h3{
     text-align: center;
     font-size: 1.9rem;
 }
-.Project hr{
+#Project hr{
     margin: auto;
     width: 10rem;
     border: 1px solid #062ab8;
@@ -156,12 +164,12 @@ span{
 }
 .Projects_container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
     height: 70%;
 }
 .Project_container{
-    height: 20.5rem;
+    height: fit-content;
     border-radius: 4px;
     cursor: pointer;
     background: linear-gradient(120deg, #062ab8, #7b7693);
@@ -195,20 +203,21 @@ span{
     font-weight: bold;
     cursor: pointer;
     margin-left:40%;
+    margin-bottom: 0.4rem;
 }
 .Project_container button:hover{
     transition: all ease-in 200ms;
     background-color: #336fd1;
 }
-.Contact{
-    height: 70vh;
+#Contact{
+    height: 80vh;
     padding:2rem;
 }
-.Contact h3{
+#Contact h3{
     text-align: center;
     font-size: 1.8rem;
 }
-.Contact hr{
+#Contact hr{
     margin: auto;
     width: 10.5rem;
     border: 1px solid #062ab8;
@@ -219,7 +228,7 @@ input{
     outline: none;
     font-size: 1rem;
     display: block;
-    margin-left: 3rem;
+    margin-left: 4%;
     width: 92%;
     margin-bottom: 0.6rem;
     border: none;
@@ -231,7 +240,7 @@ textarea{
     outline: none;
     font-size: 1rem;
     display: block;
-    margin-left: 3rem;
+    margin-left: 4%;
     width: 92%;
     margin-bottom: 0.6rem;
     border: none;
@@ -242,7 +251,7 @@ form button{
     background-color: #062ab8;
     border: none;
     margin-top: 0.5rem;
-    margin-left: 3rem;
+    margin-left: 4%;
     padding: 1rem 1rem;
     color: #f2f0ee;
     font-size: 1rem;
@@ -255,5 +264,75 @@ form button:hover{
     transition: all ease-in 200ms;
     background-color: #336fd1;
 }
-/* --secondary: #1b1d22; 
---accent: #7b7693;*/
+.error{
+    margin-left: 4%;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: #bf0606;
+    padding: 0.7rem 0.8rem;
+    font-size: 1rem;
+    width: 92%;
+    border: none;
+    font-weight: bold;
+    position: relative;
+    animation: slideInRight 0.35s ease-in-out forwards;
+}
+.recive{
+    margin-left: 4%;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: #16ad16;
+    padding: 0.7rem 0.8rem;
+    font-size: 1rem;
+    width: 92%;
+    border: none;
+    font-weight: bold;
+    position: relative;
+    animation: slideInRight 0.35s ease-in-out forwards;
+}
+@media (max-width: 768px) {
+    nav {
+        padding: 1.2rem 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .nav_menu {
+        gap: 1rem; /* Reduce gap between menu items */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav_menu li {
+        font-size: 0.9rem; /* Reduce font size on smaller screens */
+    }
+    nav h5{
+        display: none;
+    }
+    .about_me_image_conatainer{
+        display: none;
+    }        
+    #landing_page h3{
+        font-size: 1.1rem;
+    }
+    #landing_page{
+    height: 48vh;
+    }
+    #Resume{
+    margin-right: 0rem;
+    }
+    .about_me_text_container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    }
+    #Contact{
+        height: 60vh;
+    }
+}
+@media (max-width: 430px) {
+    #Skills{
+        padding: 3.5rem;
+    }
+    #Project{
+        padding: 3.5rem;
+    }
+}

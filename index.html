@@ -14,34 +14,34 @@
     <nav>
         <h5>tech rise</h5>
         <ul class="nav_menu">
-            <li class="active">Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Project</li>
-            <li>Contact</li>
+            <li class="active"><a href="body">Home</a></li>
+            <li><a href="#about_me">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
     </nav>
     <main>
-        <section class="landing_page">
+        <section id="landing_page">
             <h3>Hi, I'm <span>Housni mohammed said</span></h3>
             <h4>Full stack developer</h4>
-            <button>Contect Me</button>
+            <button class="Contect_me_button">Contect Me</button>
         </section>
-        <section class="about_me">
-            <div>
+        <section id="about_me">
+            <div class="about_me_text_container">
                 <h3>About me</h3>
                 <hr>
                 <p>I'm Housni Mohammed Said, a dedicated full-stack developer </p>
                 <p>I have a  passion for crafting exceptional web applications</p>
                 <p>I'm in the final stages of completing my master's degree, all the while honing my skills</p>
-                <button id="Resume">Resume</button>
-                <button>Contact Me</button>
+                <button id="Resume"><a href="image/CV.pdf" download > Resume</a></button>
+                <button class="Contect_me_button">Contact Me</button>
             </div>
-            <div>
+            <div class="about_me_image_conatainer">
                 <img class="about_me_image" src="image/undraw_futuristic_interface_re_0cm6.svg" >
             </div>
         </section>
-        <section class="Skills">
+        <section id="Skills">
             <h3>My <span>Skills</span></h3>
             <hr>
             <div class="Skills_container">
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </section>
-        <section class="Project">
+        <section id="Project">
             <h3>My <span>Project</span></h3>
             <hr>
             <div class="Projects_container">
@@ -73,30 +73,31 @@
                     <img src="image/Info_Academy.png" alt="">
                     <h4>INFO ACADEMY</h4>
                     <p>an engaging educational experience</p>
-                    <button>Code</button>
+                    <button><a href="https://github.com/hsnsaid/BD-Projet" target="_blank">Code</a></button>
                 </div>
                 <div class="Project_container">
                     <img src="image/linkedin.png" alt="">
                     <h4>linkclone</h4>
-                    <p>a linkedin-clone</p>
-                    <button>Code</button>
+                    <p>represents a full clone of LinkedIn,</p>
+                    <button><a href="https://github.com/hsnsaid/linkedin-clone" target="_blank">Code</a></button>
                 </div>
                 <div class="Project_container">
                     <img src="image/todo.png" alt="">
                     <h4>todo</h4>
                     <p> todo list with additional features</p>
-                    <button>Code</button>
+                    <button><a href="https://github.com/hsnsaid/todo-list-" target="_blank">Code</a></button>
                 </div>
             </div>
         </section>
-        <section class="Contact">
+        <section id="Contact">
             <h3><span>Contact Me</span></h3>
             <hr>
-            <form action="">
+            <form  id="my-form" action="https://formspree.io/f/mvojaovk" method="post">
                 <input type="text" placeholder="Enter your Name">
-                <input type="email"placeholder="Enter your Email">
-                <textarea name="" id="" cols="30" rows="3" placeholder="Your Message Here"></textarea>
-                <button>Send Message</button>
+                <input type="email"placeholder="Enter your Email" name="email">
+                <textarea name="message"  id="" cols="30" rows="3" placeholder="Your Message Here"></textarea>
+                <button id="my-form-button">Send Message</button>
+                <p id="my-form-status"></p>
             </form>
         </section>
     </main>
