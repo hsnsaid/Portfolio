@@ -1,338 +1,271 @@
-@keyframes slideInRight {
-    0% {
-      opacity: 0;
-      transform: translateX(100%);
+@keyframes slideInRight{
+    0%{opacity:0;transform:translateX(100%)
     }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }  
+    100%{opacity:1;transform:translateX(0)}
+}
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0
 }
 body{
-    background-color:#030302;
-    color: #f2f0ee;
-}
-nav{
-    display: flex;
-    padding: 1.2rem 3rem;
-    align-content: center;
-    justify-content: space-between;
-    height: 20vh;
+    background-color:#030302;color:#f2f0ee
+}nav{
+    padding:1.2rem 3rem;
+    align-content:center;
+    justify-content:space-between;
+    height:20vh
 }
 nav h5{
-    font-size: 1rem;
+    font-size:1rem
+}
+#about_me,.nav_menu,nav{
+    display:flex
+}
+#Contact hr,#Project hr,#Skills hr{
+    margin:auto auto 2.5rem
+}
+.Contect_me_button,form button{
+    background-color:#062ab8
 }
 .nav_menu{
-    display: flex;
-    width: 20%;
-    gap: 1.5rem;
-    width: 70%;
-    justify-content: flex-end;
+    gap:1.5rem;
+    width:70%;
+    justify-content:flex-end
+}
+.Projects_container,.Skills_container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr))
 }
 .nav_menu li{
-    list-style-type: none;
-    font-weight: bold;
-    font-size: 0.95rem;
-    cursor: pointer;
+    list-style-type:none;
+    font-weight:700;
+    font-size:.95rem;
+    cursor:pointer
 }
-a {
-    text-decoration: none;
-    color: inherit;
+a{
+    text-decoration:none;
+    color:inherit
 }
 .active{
-    color: #336fd1;
+    color:#336fd1
+}
+#Resume,.Contect_me_button{
+    border:none;
+    padding:.5rem 1rem;
+    color:#f2f0ee;
+    font-size:.8rem;
+    font-weight:700;
+    cursor:pointer;
+    margin-top:.5rem    
 }
 .nav_menu li:hover{
-    transition: all ease-in 250ms;
-    color: #336fd1;
+    transition:250ms ease-in;color:#336fd1
 }
 #landing_page{
-    display: flex;
-    flex-direction: column;
-    height: 65vh;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+    display:flex;
+    flex-direction:column;
+    height:65vh;
+    justify-content:center;
+    align-items:center;
+    gap:.5rem
 }
 #landing_page h3{
-    font-size: 1.7rem;
+    font-size:1.7rem
 }
 span{
-    background: linear-gradient(120deg, #062ab8, #7b7693);
+    background:linear-gradient(120deg,#062ab8,#7b7693);
+    color: transparent;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
-.Contect_me_button{
-    background-color: #062ab8;
-    border: none;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: #f2f0ee;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-.Contect_me_button:hover{
-    transition: all ease-in 200ms;
-    background-color: #336fd1;
+.Contect_me_button:hover,.Project_container button:hover,form button:hover{
+    transition:.2s ease-in;
+    background-color:#336fd1
 }
 #about_me{
-    display: flex;
-    gap: 5rem;
-    padding: 2rem;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 6rem;
+    gap:5rem;
+    padding:6rem;
+    width:100%;
+    justify-content:center;
+    align-items:center
 }
 #about_me div h3{
-    font-size: 1.4rem;
-    font-weight: bold;
+    font-size:1.4rem;
+    font-weight:700
 }
 #about_me div hr{
-    width: 20%;
-    border: 1px solid #062ab8;
-    margin-bottom: 0.7rem;
+    width:20%;
+    border:1px solid #062ab8;
+    margin-bottom:.7rem
 }
 #about_me div p{
-    font-size: 0.75rem;
-    font-weight: bold;
-    margin-bottom: 0.6rem;
+    font-size:.75rem;
+    font-weight:700;
+    margin-bottom:.6rem
 }
 .about_me_image{
-    height: 69vh;
+    height:69vh
 }
 #Resume{
-    background-color: #3f3d56;
-    border: none;
-    margin-top: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: #f2f0ee;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
+    background-color:#3f3d56;
+    margin-right:.5rem   
 }
-#Skills{
-    padding:4.5rem;
+#Project,#Skills{
+    padding:4.5rem
 }
-#Skills h3{
-    text-align: center;
-    font-size: 1.9rem;
+#Project h3,#Skills h3{
+    text-align:center;
+    font-size:1.9rem
 }
 #Skills hr{
-    margin: auto;
-    width: 9.5rem;
-    border: 1px solid #062ab8;
-    margin-bottom: 2.5rem;
+    width:9.5rem;
+    border:1px solid #062ab8
 }
 .Skills_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
+    gap:1rem
 }
 .image_container{
-    height: 10rem;
-    border-radius: 4px;
-    cursor: pointer;
+    height:10rem;
+    border-radius:4px;
+    cursor:pointer
 }
-.image_container:hover{
-    transition: all ease 250ms;
-    transform: scale(1.1);
+.Project_container:hover,.image_container:hover{
+    transition:250ms;
+    transform:scale(1.1)
 }
 .image_container img{
-    height: 100%;
-    width: 100%;
-}
-#Project{
-    padding:4.5rem;
-}
-#Project h3{
-    text-align: center;
-    font-size: 1.9rem;
+    height:100%;
+    width:100%
 }
 #Project hr{
-    margin: auto;
-    width: 10rem;
-    border: 1px solid #062ab8;
-    margin-bottom: 2.5rem;
+    width:10rem;
+    border:1px solid #062ab8
 }
 .Projects_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    height: 70%;
+    gap:1.5rem;
+    height:70%
 }
 .Project_container{
-    height: fit-content;
-    border-radius: 4px;
-    cursor: pointer;
-    background: linear-gradient(120deg, #062ab8, #7b7693);
-}
-.Project_container:hover{
-    transition: all ease 250ms;
-    transform: scale(1.1);
+    height:fit-content;
+    border-radius:4px;
+    cursor:pointer;
+    background:linear-gradient(120deg,#062ab8,#7b7693)
 }
 .Project_container h4{
-    color: #030302;
-    font-size: 1rem;
-    text-align: center;
-    margin-top: 0.25rem;
+    color:#030302;
+    font-size:1rem;
+    text-align:center;
+    margin-top:.25rem
 }
 .Project_container p{
-    padding: 0.1rem 0.5rem;
-    color: #030302;
-    font-size: 1rem;
-    margin: 0.35rem 0;
+    padding:.1rem .5rem;
+    color:#030302;
+    font-size:1rem;
+    margin:.35rem 0
+}
+.Project_container button,form button{
+    border:none;
+    color:#f2f0ee;
+    font-weight:700;
+    cursor:pointer
 }
 .Project_container img{
-    height: 14rem;
-    width: 100%;
+    height:14rem;
+    width:100%
 }
 .Project_container button{
-    background-color: #3f3d56;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: #f2f0ee;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
+    background-color:#3f3d56;
+    padding:.5rem 1rem;
+    font-size:.8rem;
     margin-left:40%;
-    margin-bottom: 0.4rem;
-}
-.Project_container button:hover{
-    transition: all ease-in 200ms;
-    background-color: #336fd1;
+    margin-bottom:.4rem
 }
 #Contact{
-    height: 80vh;
-    padding:2rem;
+    height:80vh;
+    padding:2rem
 }
 #Contact h3{
-    text-align: center;
-    font-size: 1.8rem;
+    text-align:center;
+    font-size:1.8rem
 }
 #Contact hr{
-    margin: auto;
-    width: 10.5rem;
-    border: 1px solid #062ab8;
-    margin-bottom: 2.5rem;
+    width:10.5rem;
+    border:1px solid #062ab8
 }
-input{
-    padding: 0.9rem 0.8rem;
-    outline: none;
-    font-size: 1rem;
-    display: block;
-    margin-left: 4%;
-    width: 92%;
-    margin-bottom: 0.6rem;
-    border: none;
-    border-radius: 0.325rem;
-    background: #c7c4d8;
-}
-textarea{
-    padding: 0.9rem 0.8rem;
-    outline: none;
-    font-size: 1rem;
-    display: block;
-    margin-left: 4%;
-    width: 92%;
-    margin-bottom: 0.6rem;
-    border: none;
-    border-radius: 0.325rem;
-    background: #c7c4d8;
+input,textarea{
+    padding:.9rem .8rem;
+    outline:0;
+    font-size:1rem;
+    display:block;
+    margin-left:4%;
+    width:92%;
+    margin-bottom:.6rem;
+    border:none;
+    border-radius:.325rem;
+    background:#c7c4d8
 }
 form button{
-    background-color: #062ab8;
-    border: none;
-    margin-top: 0.5rem;
-    margin-left: 4%;
-    padding: 1rem 1rem;
-    color: #f2f0ee;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    width: 92%;
-    border-radius: 7px;
+    margin-top:.5rem;
+    margin-left:4%;
+    padding:1rem;
+    font-size:1rem;
+    width:92%;
+    border-radius:7px
 }
-form button:hover{
-    transition: all ease-in 200ms;
-    background-color: #336fd1;
+.error,.recive{
+    margin-left:4%;
+    margin-top:1rem;
+    text-align:center;
+    padding:.7rem .8rem;
+    font-size:1rem;
+    width:92%;
+    border:none;
+    font-weight:700;
+    position:relative;
+    animation:.35s ease-in-out forwards slideInRight
 }
 .error{
-    margin-left: 4%;
-    margin-top: 1rem;
-    text-align: center;
-    background-color: #bf0606;
-    padding: 0.7rem 0.8rem;
-    font-size: 1rem;
-    width: 92%;
-    border: none;
-    font-weight: bold;
-    position: relative;
-    animation: slideInRight 0.35s ease-in-out forwards;
+    background-color:#bf0606
 }
 .recive{
-    margin-left: 4%;
-    margin-top: 1rem;
-    text-align: center;
-    background-color: #16ad16;
-    padding: 0.7rem 0.8rem;
-    font-size: 1rem;
-    width: 92%;
-    border: none;
-    font-weight: bold;
-    position: relative;
-    animation: slideInRight 0.35s ease-in-out forwards;
+    background-color:#16ad16
 }
-@media (max-width: 768px) {
-    nav {
-        padding: 1.2rem 1rem; /* Reduce padding on smaller screens */
+@media (max-width:768px){
+    nav{
+        padding:1.2rem 1rem
     }
-
-    .nav_menu {
-        gap: 1rem; /* Reduce gap between menu items */
-        justify-content: center;
-        width: 100%;
+    .nav_menu{
+        gap:1rem;
+        justify-content:center;
+        width:100%
     }
-
-    .nav_menu li {
-        font-size: 0.9rem; /* Reduce font size on smaller screens */
+    .nav_menu li{
+        font-size:.9rem
     }
-    nav h5{
-        display: none;
+    .about_me_image_conatainer,nav h5{
+        display:none
     }
-    .about_me_image_conatainer{
-        display: none;
-    }        
     #landing_page h3{
-        font-size: 1.1rem;
+        font-size:1.1rem
     }
     #landing_page{
-    height: 48vh;
+        height:48vh
     }
     #Resume{
-    margin-right: 0rem;
+        margin-right:0
     }
     .about_me_text_container{
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
+        display:flex;
+        flex-direction:column;
+        gap:.2rem;
     }
     #Contact{
-        height: 60vh;
+        height:60vh
     }
 }
-@media (max-width: 430px) {
-    #Skills{
-        padding: 3.5rem;
-    }
-    #Project{
-        padding: 3.5rem;
+@media (max-width:430px){
+    #Project,#Skills{
+        padding:3.5rem
     }
 }
